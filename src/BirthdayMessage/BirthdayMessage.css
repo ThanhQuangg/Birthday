@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap');
+
+.message-container {
+  display: flex;
+  font-family: 'Noto Sans SC', sans-serif;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Chiều cao toàn bộ viewport */
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền nửa trong suốt */
+}
+
+.message {
+  font-size: 3rem; /* Kích thước chữ lớn */
+  font-family: 'Arial', sans-serif; /* Font chữ đẹp */
+  color: white; /* Màu chữ */
+  opacity: 0; /* Bắt đầu với độ mờ là 0 */
+  transition: opacity 1s ease-in-out; /* Hiệu ứng chuyển đổi */
+}
+
+/* Hiệu ứng xuất hiện */
+.fade-in {
+  opacity: 1; /* Độ mờ khi xuất hiện */
+}
+
+/* Hiệu ứng biến mất */
+.fade-out {
+  opacity: 0; /* Độ mờ khi biến mất */
+}

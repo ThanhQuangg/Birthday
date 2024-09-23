@@ -1,0 +1,27 @@
+.question-container {
+  position: relative; /* Để các nút có thể định vị tuyệt đối */
+  text-align: center; /* Căn giữa văn bản */
+  margin-top: 20px; /* Khoảng cách từ trên */
+}
+
+.question-text {
+  font-size: 1.5rem; /* Kích thước chữ câu hỏi */
+  margin-bottom: 20px; /* Khoảng cách dưới câu hỏi */
+}
+
+.answer-button {
+  padding: 10px 20px; /* Padding cho nút */
+  margin: 5px; /* Khoảng cách giữa các nút */
+  font-size: 1rem; /* Kích thước chữ */
+  cursor: pointer; /* Hiển thị con trỏ tay khi hover */
+}
+
+.no-button {
+  background-color: red; /* Màu nền cho nút No */
+  color: white; /* Màu chữ cho nút No */
+}
+
+.answer-response {
+  font-size: 1.5rem; /* Kích thước chữ cho phản hồi */
+  margin-top: 20px; /* Khoảng cách trên phản hồi */
+}

@@ -1,0 +1,51 @@
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    height: 100vh; /* Chiều cao đầy đủ của màn hình */
+}
+
+.timeline-item {
+    display: none; /* Ẩn tất cả các mục */
+    width: 1300px; /* Chiều rộng đầy đủ */
+    height: 1300px;
+}
+
+.timeline-item.show {
+    display: block; /* Hiển thị mục hiện tại */
+}
+
+.timeline-content {
+    position: relative;
+    width: 100%; /* Chiều rộng đầy đủ */
+    text-align: center;
+}
+
+.timeline-content img {
+    width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng */
+    height: 600px; /* Giữ tỷ lệ hình ảnh */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
+}
+
+.timeline-text {
+    position: absolute;
+    bottom: 20px; /* Căn giữa văn bản ở dưới cùng */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.7); /* Nền mờ cho văn bản */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #ccc;
+    transform: translateX(-50%);
+}
