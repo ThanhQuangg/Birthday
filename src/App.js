@@ -12,7 +12,7 @@ function App() {
         <source src="/birthday-background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <audio controls autoPlay>
+      <audio controls autoPlay loop>
         <source src="music.mp3" type="audio/mpeg" />
         Your browser does not support the audio tag.
       </audio>

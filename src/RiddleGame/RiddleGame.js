@@ -29,6 +29,16 @@ const riddles = [
         options: ["Mùa xuân", "Mùa hạ", "Mùa thu", "Mùa đông"],
         answer: 2,
     },
+    {
+        question: "Vợ yêu nghĩ năm nay mình có quà sinh nhật không?",
+        options: ["Có", "Có thể", "Chắc có", "Không"],
+        answer: 0,
+    },
+    {
+        question: "Vợ yêu nghĩ nó là cái gì?",
+        options: ["Máy sấy Dyson", "Máy lọc không khí", "Máy triệt lông Halio", "Một con lego lấp lánh ánh đèn"],
+        answer: 3,
+    },
 ];
 
 const RiddleGame = () => {
