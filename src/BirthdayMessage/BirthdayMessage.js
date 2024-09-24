@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './BirthdayMessage.css';
-import RiddleGame from '../RiddleGame';
-import Timeline from '../Timeline';
+import Timeline from '../Timeline/Timeline';
 
 
 const messages = [
@@ -15,7 +14,7 @@ const messages = [
   "Chúc vợ yêu mãi mãi có được anh!",
   "Chúc vợ yêu sẽ luôn nhận được những điều tốt lành.",
   "Anh yêu vợ nòa!!!",
-  "Bây giờ chào mừng vợ yêu tới với trò chơi đố vui"
+  "Bây giờ chào mừng vợ yêu tới với cuộc đời của mình"
 ];
 
 function BirthdayMessages() {
@@ -30,7 +29,7 @@ function BirthdayMessages() {
         const nextIndex = currentMessageIndex + 1;
         setCurrentMessageIndex(nextIndex);
         setIsVisible(true);
-      }, 1000);
+      }, 10000);
 
       return () => clearTimeout(timer);
     } else {

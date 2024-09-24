@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Timeline.css'; // Import file CSS cho styling
-import RiddleGame from './RiddleGame';
+import RiddleGame from '../RiddleGame/RiddleGame';
 
 const journeyData = [
     { year: 2019, image: "1.jpg", text: "Huyền Trang 2019." },
@@ -26,7 +26,7 @@ const Timeline = () => {
                 }
                 return newIndex;
             });
-        }, 1000); // Thay đổi mỗi 1 giây
+        }, 10000); // Thay đổi mỗi 1 giây
 
         return () => clearInterval(interval); // Dọn dẹp interval khi component unmount
     }, []);

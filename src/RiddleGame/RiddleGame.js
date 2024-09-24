@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import Countdown from './Countdown';
+
 import './RiddleGame.css'; 
+import Countdown from '../Countdown/Countdown';
 
 const riddles = [
     {

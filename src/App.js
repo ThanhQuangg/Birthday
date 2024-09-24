@@ -1,9 +1,9 @@
 import React from 'react';
 import BirthdayMessage from './BirthdayMessage/BirthdayMessage';
-import Question from './Question';
+import Question from './Question/Question';
 import './App.css';
-import RiddleGame from './RiddleGame';
-import Countdown from './Countdown';
+import RiddleGame from './RiddleGame/RiddleGame';
+import Countdown from './Countdown/Countdown';
 
 function App() {
   return (
