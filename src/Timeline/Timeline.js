@@ -26,7 +26,7 @@ const Timeline = () => {
                 }
                 return newIndex;
             });
-        }, 10000); // Thay đổi mỗi 1 giây
+        }, 1000); // Thay đổi mỗi 1 giây
 
         return () => clearInterval(interval); // Dọn dẹp interval khi component unmount
     }, []);
@@ -40,7 +40,7 @@ const Timeline = () => {
                             <div className="timeline-content">
                                 <img src={item.image} alt={`Hình ảnh năm ${item.year}`} />
                                 <div className="timeline-text">
-                                    <h3>{item.year}</h3>
+                                    {/* <h3>{item.year}</h3> */}
                                     <p>{item.text}</p>
                                 </div>
                             </div>

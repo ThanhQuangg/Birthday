@@ -49,7 +49,7 @@ const RiddleGame = () => {
     const [gameFinished, setGameFinished] = useState(false);
     const [showCountdown, setShowCountdown] = useState(false);
 
-    const birthdayDate = "2024-09-25T00:00:00+07:00";
+    const birthdayDate = "2024-09-24T14:15:00+07:00";
 
 
     const handleOptionClick = (index) => {

@@ -29,7 +29,7 @@ function BirthdayMessages() {
         const nextIndex = currentMessageIndex + 1;
         setCurrentMessageIndex(nextIndex);
         setIsVisible(true);
-      }, 10000);
+      }, 1000);
 
       return () => clearTimeout(timer);
     } else {

@@ -1,8 +1,11 @@
 // src/Countdown.js
 import React, { useState, useEffect } from 'react';
+import './Countdown.css';
+import confetti from 'canvas-confetti';
 
 const Countdown = ({ birthdayDate }) => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(birthdayDate));
+  const [celebrate, setCelebrate] = useState(false);
 
   function calculateTimeLeft(birthday) {
     const now = new Date();
@@ -15,7 +18,9 @@ const Countdown = ({ birthdayDate }) => {
       setTimeLeft(prevTime => {
         const newTimeLeft = Math.max(prevTime - 1000, 0);
         if (newTimeLeft === 0) {
-          clearInterval(timer); // Dừng timer khi đến 0
+          clearInterval(timer);  // Dừng timer khi đến 0
+          setCelebrate(true);
+          runFireworks(); // Kích hoạt pháo hoa khi countdown về 0  
         }
         return newTimeLeft;
       });
@@ -23,6 +28,14 @@ const Countdown = ({ birthdayDate }) => {
 
     return () => clearInterval(timer); // Dọn dẹp khi component bị hủy
   }, []);
+
+  const runFireworks = () => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  };
 
   const formatTime = (milliseconds) => {
     const totalSeconds = Math.floor(milliseconds / 1000);
@@ -40,14 +53,20 @@ const Countdown = ({ birthdayDate }) => {
   const { hours, minutes, seconds } = formatTime(timeLeft);
 
   return (
-    <div>
+    <div className={`countdown-container ${celebrate ? 'celebrate' : ''}`}>
       <h1>Đếm Ngược Đến Sinh Nhật</h1>
       {timeLeft > 0 ? (
-        <p>{`${hours} giờ ${minutes} phút ${seconds} giây còn lại`}</p>
+        <p className="time-left">{`${hours} giờ ${minutes} phút ${seconds} giây còn lại`}</p>
       ) : (
-        <p>Chúc mừng sinh nhật!</p>
+        <div className="birthday-message">
+          <p>Chúc mừng sinh nhật vợ yêu nòa!</p>
+          <img src="cake.png" alt="Birthday Cake" />
+          <div className="confetti"></div>
+        </div>
       )}
+
     </div>
+
   );
 };
 
