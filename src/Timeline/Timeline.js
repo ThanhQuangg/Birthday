@@ -26,7 +26,7 @@ const Timeline = () => {
                 }
                 return newIndex;
             });
-        }, 1000); // Thay đổi mỗi 1 giây
+        }, 10000); // Thay đổi mỗi 1 giây
 
         return () => clearInterval(interval); // Dọn dẹp interval khi component unmount
     }, []);
